@@ -185,7 +185,7 @@ impl LJMLibrary {
     pub fn write_name<T: Into<Vec<u8>>>(
         handle: i32,
         name_to_write: T,
-        value_to_write: u32,
+        value_to_write: f32,
     ) -> Result<(), LJMError> {
         #[cfg(feature = "dynlink")]
         let d_write_to_addr: Symbol<extern "C" fn(i32, *const c_char, c_double) -> i32> =
